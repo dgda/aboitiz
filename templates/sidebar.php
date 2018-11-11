@@ -1,0 +1,19 @@
+	<div class="col s3 m3">
+        <div class="collection grey lighten-2">
+			<?php if($_SESSION['type'] == 'admin'): ?>
+				<a href="<?= $base_url; ?>/admin" class="collection-item avatar <?php if($last == 'admin') echo 'active'; else echo ' grey-text text-darken-2'; ?>"><i class="material-icons secondary-content circle <?php if($last == 'admin') echo 'white carbon-text '; else echo 'cerulean  white-text'; ?>">home</i> <h6 class="hide-on-small-only"><strong>Home</strong></h6></a>
+				<a href="<?= $base_url; ?>/admin/view_reports?page=1" class="collection-item avatar <?php if($last == 'view_reports') echo 'active'; else echo ' grey-text text-darken-2'; ?>"><i class="material-icons circle <?php if($last == 'view_reports') echo 'white carbon-text '; else echo 'cerulean  white-text'; ?> secondary-content">storage</i> <h6 class="hide-on-small-only"><strong>Service/Expense Reports</strong></h6></a>
+				<!--
+				<a href="<?= $base_url; ?>/admin/view_reservations?page=1" class="collection-item avatar <?php if($last == 'view_reservations') echo 'active'; else echo ' grey-text text-darken-2'; ?>"><i class="material-icons circle <?php if($last == 'view_reservations') echo 'white carbon-text '; else echo 'cerulean  white-text'; ?> secondary-content">more_horiz</i> <h6 class="hide-on-small-only"><strong>View Reservations</strong></h6></a>
+				-->
+				<a href="<?= $base_url; ?>/admin/view_clients?page=1" class="collection-item avatar <?php if($last == 'view_clients') echo 'active'; else echo ' grey-text text-darken-2'; ?>"><i class="material-icons circle <?php if($last == 'view_clients') echo 'white carbon-text '; else echo 'cerulean  white-text'; ?> secondary-content">supervisor_account</i> <h6 class="hide-on-small-only"><strong>View Clients</strong></h6></a>
+				<a href="<?= $base_url; ?>/admin/view_quotations?page=1" class="collection-item avatar <?php if($last == 'view_quotations') echo 'active'; else echo ' grey-text text-darken-2'; ?>"><i class="material-icons circle <?php if($last == 'view_quotations') echo 'white carbon-text '; else echo 'cerulean  white-text'; ?> secondary-content">supervisor_account</i> <h6 class="hide-on-small-only"><strong>View Quotes</strong></h6></a>
+            <?php endif; ?>
+			<?php if($_SESSION['type'] == 'user'): ?>
+				<a href="<?= $base_url; ?>/user" class="collection-item avatar <?php if($last == 'user') echo 'active'; else echo ' carbon-text '; ?>"><i class="material-icons secondary-content circle <?php if($last == 'user') echo 'white carbon-text '; else echo 'cerulean  white-text'; ?>">home</i> <h6 class="hide-on-small-only"><strong>Home</strong></h6></a>
+				<a href="<?= $base_url; ?>/user/reservations?page=1" class="collection-item avatar <?php if($last == 'reservations') echo 'active'; else echo ' carbon-text '; ?>"><i class="material-icons circle <?php if($last == 'reservations') echo 'white carbon-text '; else echo 'cerulean  white-text'; ?> secondary-content">event_note</i> <h6 class="hide-on-small-only"><strong>My Reservations</strong></h6></a>
+				<a href="<?= $base_url; ?>/user/reserve?page=1" class="collection-item avatar <?php if($last == 'reserve') echo 'active'; else echo ' carbon-text '; ?>"><i class="material-icons circle <?php if($last == 'reserve') echo 'white carbon-text '; else echo 'cerulean  white-text'; ?> secondary-content">event</i> <h6 class="hide-on-small-only"><strong>Reserve an item</strong></h6></a>
+            <?php endif; ?>
+			<a href="<?= $base_url; ?>/action/logout.php" class="collection-item avatar	red-text"><i class="material-icons circle secondary-content red white-text">exit_to_app</i> <h6 class="hide-on-small-only"><strong>Logout</strong></h6></a>
+        </div>
+    </div>
